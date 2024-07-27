@@ -3,20 +3,24 @@ import Button from "./Button";
 
 function Hero() {
   return (
-    <div className="">
-      <div className="h-56 overflow-hidden">
-        <img src={imageHero} alt="" className="h-56 w-full object-cover" />
-        <div className="absolute inset-0 bg-black h-56 opacity-70 top-[67px]"></div>
+    <div className="w-full">
+      <div className="overflow-hidden">
+        <img
+          src={imageHero}
+          alt=""
+          className="h-56 md:h-64 lg:h-80 w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black h-56 md:h-64 lg:h-80 opacity-70 top-[67px] md:top-[76px]"></div>
       </div>
-      <div className="container mx-auto absolute top-[7em]">
-        <div className="flex flex-col justify-center items-center text-center">
-          <h1 className="text-white text-lg font-bold">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Doloremque, molestiae?
+      <div className="flex justify-center w-full mx-auto absolute top-[7em] md:top-[10em]">
+        <div className="flex flex-col lg:gap-3 justify-center items-center text-center">
+          <h1 className="text-white md:text-3xl font-bold">
+            "Dive Into Technology and Bring a Happiness"
           </h1>
-          <p className="w-[80%] text-white">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-            nesciunt?
+          <p className="w-[80%] lg:w-[70%] text-sm md:text-lg text-white">
+            Dengan diambilnya tema ini, diharapkan para peserta dapat
+            memperdalam pengetahuan mereka dalam bidang IT mulai dari dasar
+            hingga tingkat mahir.
           </p>
           <Button>Get Started</Button>
         </div>
