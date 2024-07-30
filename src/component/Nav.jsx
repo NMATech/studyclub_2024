@@ -30,16 +30,16 @@ function Nav() {
 
   return (
     <>
-      <nav className="flex justify-between items-center bg-blueSc-500 text-white p-3">
+      <nav className="flex justify-between items-center bg-myBg text-white p-3">
         <div className="flex justify-center items-center gap-[10px]">
           <img src={logo} alt="Logo Study Club" className="w-[40px]" />
-          <h1 className="text-xl md:text-2xl">StudyClub</h1>
+          <h1 className="text-xl md:text-2xl text-myText">StudyClub</h1>
         </div>
         <div className="flex">
           <ul
             className={`${
               menu ? "block" : "hidden"
-            } md:static absolute md:flex md:items-center md:gap-[20px] top-[55px] right-0 bg-blueSc-500 p-3 text-center text-lg transition-all delay-200 ease-in`}
+            } z-10 md:static absolute md:flex md:items-center md:gap-[20px] top-[55px] right-0 bg-myBg p-3 text-center text-lg text-myText transition-all delay-200 ease-in`}
           >
             {listMenu.map((menu, index) => (
               <li key={index} className="mb-3 md:mb-0">

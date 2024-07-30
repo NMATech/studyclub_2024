@@ -9,6 +9,11 @@ export default {
           400: "#376a81",
           500: "#051640",
         },
+        myText: "#DCE4EF",
+        myBg: "#070E17",
+        myPrimary: "#85ACE6",
+        mySecondary: "#0F428E",
+        myAccent: "#1471f9",
         cyanHimtika: "#06b7e9",
       },
       backgroundImage: {
