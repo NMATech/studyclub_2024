@@ -5,6 +5,10 @@ import Hero from "../component/Hero";
 import About from "../component/About";
 import Event from "../component/Event";
 import Pemateri from "../component/Pemateri";
+import Timeline from "../component/Timeline";
+import Faq from "../component/Faq";
+import Sosmed from "../component/Sosmed";
+import Footer from "../component/Footer";
 
 function Home() {
   return (
@@ -14,6 +18,10 @@ function Home() {
       <About />
       <Event />
       <Pemateri />
+      <Timeline />
+      <Faq />
+      <Sosmed />
+      <Footer />
     </main>
   );
 }

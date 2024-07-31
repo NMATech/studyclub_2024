@@ -15,15 +15,15 @@ function Nav() {
       title: "Home",
     },
     {
-      link: "#",
+      link: "#about",
       title: "About",
     },
     {
-      link: "#",
+      link: "#event",
       title: "Event",
     },
     {
-      link: "#",
+      link: "#timeline",
       title: "Timeline",
     },
   ];
@@ -43,7 +43,10 @@ function Nav() {
           >
             {listMenu.map((menu, index) => (
               <li key={index} className="mb-3 md:mb-0">
-                <a href="" className="hover:border-b-2 hover:border-white">
+                <a
+                  href={menu.link}
+                  className="hover:border-b-2 hover:border-white"
+                >
                   {menu.title}
                 </a>
               </li>

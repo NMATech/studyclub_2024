@@ -4,11 +4,6 @@ import { RiFlutterFill } from "react-icons/ri";
 function Event() {
   const events = [
     {
-      logo: FaFigma,
-      title: "UI/UX Design",
-      desc: "Kelas UI/UX mengajarkan prinsip desain antarmuka dan pengalaman pengguna.",
-    },
-    {
       logo: FaPython,
       title: "Data Science",
       desc: "Kelas Data Science memperkenalkan dasar-dasar analisis data dan machine learning.",
@@ -18,10 +13,15 @@ function Event() {
       title: "Mobile Programming",
       desc: "Kelas Mobile Programming mencakup dasar-dasar pengembangan aplikasi mobile.",
     },
+    {
+      logo: FaFigma,
+      title: "UI/UX Design",
+      desc: "Kelas UI/UX mengajarkan prinsip desain antarmuka dan pengalaman pengguna.",
+    },
   ];
 
   return (
-    <div className="bg-myBg text-white p-3 mt-[10px] md:mt-[50px]">
+    <div className="bg-myBg text-white p-3 mt-[10px] md:mt-[50px]" id="event">
       <div className="flex flex-col gap-3 mb-3 text-center">
         <h1 className="font-bold text-3xl md:text-4xl">Our Events</h1>
         <p className="md:w-[60%] mx-auto md:text-xl">
@@ -35,7 +35,7 @@ function Event() {
           return (
             <section
               key={index}
-              className="bg-gradient-to-b from-mySecondary/10 to-mySecondary/50 hover:from-mySecondary/50 hover:to-myAccent/80 flex flex-col justify-center items-center w-[70%] md:w-[30%] h-[13em] gap-3 border rounded-xl p-3"
+              className="transition duration-300 ease-in hover:translate-y-1 bg-gradient-to-b from-myPrimary/30 to-mySecondary/50 hover:from-myPrimary/50 hover:to-myAccent/80 flex flex-col justify-center items-center w-[70%] md:w-[30%] h-[13em] gap-3 border rounded-xl p-3"
             >
               <Logo size={40} />
               <h1 className="text-xl text-center">{event.title}</h1>

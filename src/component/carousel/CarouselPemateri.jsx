@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
+import { FaAngleRight, FaAngleLeft, FaInstagram } from "react-icons/fa6";
 
 function CarouselPemateri({ pemateri }) {
   const [curr, setCurr] = useState(0);
 
   const prev = () => {
-    setCurr((curr) => (curr === 0 ? pemateri.length - 1 : curr - 1));
+    setCurr((curr) => (curr === 0 ? pemateri.length - 3 : curr - 1));
   };
 
   const next = () => {
@@ -22,23 +22,33 @@ function CarouselPemateri({ pemateri }) {
           return (
             <section
               key={index}
-              className="min-w-[47%] bg-gradient-to-b from-mySecondary/10 to-mySecondary/50 hover:from-mySecondary/50 hover:to-myAccent/80 flex flex-col justify-center items-center h-[17em] gap-3 border rounded-xl text-myText p-1"
+              className="min-w-[47%] bg-gradient-to-b from-mySecondary/10 to-mySecondary/50 hover:from-mySecondary/50 hover:to-myAccent/80 flex flex-col justify-center items-center h-[18em] gap-2 border rounded-xl text-myText p-1 relative"
             >
               <img
                 src={x.foto}
                 alt={x.nama}
                 className={
-                  x.nama === "Muhammad Rizqi Fadhilah"
-                    ? "w-[200px]"
+                  x.nama === "M. Rizqi Fadhilah"
+                    ? "w-[180px]"
                     : x.nama === "Johan"
-                    ? "w-[250px]"
+                    ? "w-[200px]"
                     : "w-[110px]"
                 }
               />
               <div>
-                <h1 className="font-bold text-lg text-center">{x.nama}</h1>
-                <p className="text-center text-md">{x.title}</p>
+                <h1 className="font-bold text-md text-center">{x.nama}</h1>
+                <p className="text-center text-sm">{x.title}</p>
               </div>
+              <a
+                href={x.insta}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-20"
+              >
+                <div className="transition duration-300 ease-in-out transform hover:translate-y-1 bg-myAccent p-2 rounded-full z-20">
+                  <FaInstagram color="white" size={20} />
+                </div>
+              </a>
             </section>
           );
         })}

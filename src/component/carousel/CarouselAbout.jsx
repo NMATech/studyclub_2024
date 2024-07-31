@@ -30,10 +30,10 @@ function CarouselAbout({
         {slides}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-2">
-        <button onClick={prev} className="bg-mySecondary rounded-full">
+        <button onClick={prev} className="bg-myPrimary rounded-full">
           <FaAngleLeft size={30} color="black" />
         </button>
-        <button onClick={next} className="bg-mySecondary rounded-full">
+        <button onClick={next} className="bg-myPrimary rounded-full">
           <FaAngleRight size={30} color="black" />
         </button>
       </div>
@@ -42,7 +42,7 @@ function CarouselAbout({
         <div className="flex items-center justify-center gap-2">
           {slides.map((_, i) => (
             <div
-              className={`transition-all w-3 h-3 bg-mySecondary rounded-full ${
+              className={`transition-all w-3 h-3 bg-myPrimary rounded-full ${
                 curr === i ? "p-2" : "bg-opacity-70"
               }`}
             ></div>
