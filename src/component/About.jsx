@@ -10,11 +10,13 @@ function About() {
 
   return (
     <div
-      className="bg-myBg flex flex-col md:flex-row justify-center items-center text-center gap-3 w-full text-myText p-3 mt-[20px] md:mt-[50px]"
+      className="flex flex-col md:flex-row justify-center items-center text-center gap-3 w-full text-myBg dark:text-myText p-3 mt-[20px] md:mt-[50px]"
       id="about"
     >
       <div className="md:w-[50%] flex flex-col gap-3">
-        <h1 className="font-bold text-3xl md:text-4xl">About</h1>
+        <h1 className="font-bold text-myBg dark:text-myText text-3xl md:text-4xl">
+          About
+        </h1>
         <h1 className="md:text-xl md:w-[90%] mx-auto">
           Study Club merupakan ruang yang memberikan kesempatan bagi para
           mahasiswa informatika untuk mempelajari ilmu pengetahuan di bidang IT.

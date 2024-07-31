@@ -27,8 +27,10 @@ function Timeline() {
 
   return (
     <div className="mt-[20px] md:mt-[50px]" id="timeline">
-      <div className="flex flex-col gap-3 text-myText text-center">
-        <h1 className="font-bold text-3xl md:text-4xl">Our Timeline</h1>
+      <div className="flex flex-col gap-3 text-myBg dark:text-myText text-center">
+        <h1 className="font-bold text-myBg dark:text-myText text-3xl md:text-4xl">
+          Our Timeline
+        </h1>
         <p className="w-[90%] md:w-[60%] mx-auto md:text-xl">
           Jadilah bagian dari perjalanan Studyclub yang penuh inspirasi dengan
           berbagai materi menarik yang kami selenggarakan.

@@ -54,10 +54,16 @@ function CarouselPemateri({ pemateri }) {
         })}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-2">
-        <button onClick={prev} className="bg-white rounded-full">
+        <button
+          onClick={prev}
+          className="bg-myAccent dark:bg-white rounded-full"
+        >
           <FaAngleLeft size={30} color="black" />
         </button>
-        <button onClick={next} className="bg-white rounded-full">
+        <button
+          onClick={next}
+          className="bg-myAccent dark:bg-white rounded-full"
+        >
           <FaAngleRight size={30} color="black" />
         </button>
       </div>

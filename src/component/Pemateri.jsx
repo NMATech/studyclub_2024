@@ -42,11 +42,11 @@ function Pemateri() {
   ];
 
   return (
-    <div className="bg-myBg p-3 mt-[10px] md:mt-[50px]">
-      <h1 className="font-bold text-3xl text-myText text-center">
+    <div className="text-myBg dark:text-myText p-3 mt-[10px] md:mt-[50px]">
+      <h1 className="font-bold text-3xl text-myBg dark:text-myText text-center">
         Meet Our Master
       </h1>
-      <p className="mt-3 text-myText md:w-[60%] mx-auto md:text-xl text-center">
+      <p className="mt-3 text-myBg dark:text-myText md:w-[60%] mx-auto md:text-xl text-center">
         Temui para ahli yang akan membimbing Anda di setiap kelas. Dengan
         bimbingan mereka, Anda akan mendapatkan wawasan mendalam dan pengalaman
         praktis yang berharga.
@@ -59,7 +59,7 @@ function Pemateri() {
           return (
             <section
               key={index}
-              className="transition duration-300 ease-in hover:translate-y-1 min-w-[25%] bg-gradient-to-b from-myPrimary/30 to-mySecondary/50 hover:from-myPrimary/50 hover:to-myAccent/80 flex flex-col justify-center items-center h-[19em] gap-1 border rounded-xl text-myText p-1"
+              className="transition duration-300 ease-in hover:translate-y-1 min-w-[25%] bg-gradient-to-b from-myPrimary/30 to-myAccent/50 hover:from-myPrimary/50 hover:to-myAccent/80 dark:from-myPrimary/30 dark:to-mySecondary/50 flex flex-col justify-center items-center h-[19em] gap-1 border rounded-xl text-myBg dark:text-myText p-1 shadow-xl shadow-mySecondary/40"
             >
               <img
                 src={x.foto}

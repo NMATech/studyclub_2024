@@ -28,10 +28,10 @@ function Faq() {
   return (
     <div className="">
       <div className="flex flex-col gap-3 p-2 text-center md:mb-[20px]">
-        <h1 className="text-myText font-bold text-2xl md:text-4xl">
+        <h1 className="text-myBg dark:text-myText font-bold text-2xl md:text-4xl">
           Frequently Asked Questions
         </h1>
-        <p className="w-[90%] md:w-[60%] mx-auto md:text-xl text-myText">
+        <p className="w-[90%] md:w-[60%] mx-auto md:text-xl text-myBg dark:text-myText">
           Temukan jawaban untuk pertanyaan yang sering diajukan di sini.
         </p>
       </div>
@@ -41,19 +41,19 @@ function Faq() {
           return (
             <div
               key={index}
-              className="w-full md:w-[70%] mx-auto overflow-hidden border border-myText rounded-xl p-2 m-2"
+              className="w-full md:w-[70%] mx-auto overflow-hidden bg-myPrimary/30 dark:bg-myBg dark:border dark:border-myText rounded-xl p-2 m-2"
             >
               <button
                 onClick={() => toggleAccordion(index)}
                 className="w-full flex justify-between"
               >
-                <h1 className="font-bold text-xl text-myText">
+                <h1 className="font-bold text-xl text-myBg dark:text-myText">
                   {faq.question}
                 </h1>
                 {isOpen ? (
-                  <MdClose color="white" size={20} />
+                  <MdClose color="#1471f9" size={20} />
                 ) : (
-                  <HiOutlinePlus color="white" size={20} />
+                  <HiOutlinePlus color="#1471f9" size={20} />
                 )}
               </button>
               <div
