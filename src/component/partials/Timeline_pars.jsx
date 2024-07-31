@@ -33,7 +33,7 @@ const Pillar = () => {
 
 const Card = ({ title, subheading }) => {
   return (
-    <div className="transition duration-300 ease-in transform hover:translate-y-1 bg-gradient-to-b from-myPrimary/30 to-myAccent/50 hover:from-myPrimary/50 hover:to-myAccent/80 dark:from-myPrimary/30 dark:to-mySecondary/50 dark:hover:from-myPrimary/50 dark:hover:to-myAccent/80 text-myBg dark:text-myText p-2 rounded-xl shadow-xl shadow-mySecondary/40">
+    <div className="transition duration-300 ease-in transform hover:translate-y-1 w-[10em] md:w-[20em] bg-gradient-to-b from-myPrimary/30 to-myAccent/50 hover:from-myPrimary/50 hover:to-myAccent/80 dark:from-myPrimary/30 dark:to-mySecondary/50 dark:hover:from-myPrimary/50 dark:hover:to-myAccent/80 text-myBg dark:text-myText p-2 rounded-xl shadow-xl shadow-mySecondary/40">
       <h1 className="text-md md:text-xl font-bold">{title}</h1>
       <h1 className="text-sm md:text-lg">{subheading}</h1>
     </div>

@@ -4,23 +4,23 @@ import TimelinePars from "./partials/Timeline_pars";
 function Timeline() {
   const timeline = [
     {
-      title: "Pendaftaran Peserta dibuka",
-      subheading: "12 Januari - 24 Januari 2024",
+      title: "Survei Kelas yang di inginkan oleh Mahasiswa",
+      subheading: "11 - 23 Mei 2024",
       direction: "left",
     },
     {
-      title: "Pendaftaran Peserta ditutup",
-      subheading: "25 Januari 2024",
+      title: "Open Recruitment Kepanitiaan",
+      subheading: "15 - 22 Juni 2024",
       direction: "right",
     },
     {
-      title: "Periode Belajar",
-      subheading: "30 Januari - 30 Maret 2024",
+      title: "Pendaftaran Peserta Study Club",
+      subheading: "4 - 11 Juli 2024",
       direction: "left",
     },
     {
-      title: "Pengumpulan Tugas Akhir",
-      subheading: "5 Juni - 20 Juni 2024",
+      title: "Pelaksanaan Study Club",
+      subheading: "13 Juli - 20 Oktober 2024",
       direction: "right",
     },
   ];

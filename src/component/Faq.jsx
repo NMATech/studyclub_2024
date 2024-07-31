@@ -6,12 +6,19 @@ import { HiOutlinePlus } from "react-icons/hi";
 function Faq() {
   const faqs = [
     {
-      question: "lorem ?",
-      answer: "ipsum",
+      question: "Apa itu Study Club ?",
+      answer:
+        "Study Club adalah forum kegiatan belajar bersama di lingkungan informatika Unsika. Di sini kita akan belajar, berdiskusi, dan berbagi pengetahuan tentang bidang IT dan umum.",
     },
     {
-      question: "lorem 2?",
-      answer: "ipsum2",
+      question: "Ada apa saja di Study Club tahun ini ?",
+      answer:
+        "Tahun ini, Study Club digelar dengan metode hybrid. Yaitu secara daring dan luring. Ada tida materi utama yang dibuka. Diantaranya : Data Science, Mobile Programming, UI/UX Design",
+    },
+    {
+      question: "Apa benefitnya daftar Study Club ?",
+      answer:
+        "Kalian yang pasti akan mendapatkan ilmu yang bermanfaat, pengalaman, teman, dan bagi kalian yang rajin hadir disetiap pertemuan serta mengerjakan project akhir akan mendapatkan Sertifikat. Selain itu juga project akhirnya dapat teman teman jadikan portofolio pribadi.",
     },
   ];
 
@@ -47,7 +54,7 @@ function Faq() {
                 onClick={() => toggleAccordion(index)}
                 className="w-full flex justify-between"
               >
-                <h1 className="font-bold text-xl text-myBg dark:text-myText">
+                <h1 className="font-bold text-lg md:text-xl text-myBg dark:text-myText">
                   {faq.question}
                 </h1>
                 {isOpen ? (
@@ -61,8 +68,8 @@ function Faq() {
                   isOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <hr className="mt-2" />
-                <p className="text-myText mt-2">{faq.answer}</p>
+                <hr className="bg-myBg dark:bg-myText mt-2" />
+                <p className="text-myBg dark:text-myText mt-2">{faq.answer}</p>
               </div>
             </div>
           );
