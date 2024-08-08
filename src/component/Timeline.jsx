@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import TimelinePars from "./partials/Timeline_pars";
+import { motion } from "framer-motion";
 
 function Timeline() {
   const timeline = [
@@ -27,7 +28,17 @@ function Timeline() {
 
   return (
     <div className="mt-[20px] md:mt-[50px]" id="timeline">
-      <div className="flex flex-col gap-3 text-myBg dark:text-myText text-center">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 100 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 1, type: "spring" }}
+        className="flex flex-col gap-3 text-myBg dark:text-myText text-center"
+      >
         <h1 className="font-bold text-myBg dark:text-myText text-3xl md:text-4xl">
           Our Timeline
         </h1>
@@ -35,8 +46,18 @@ function Timeline() {
           Jadilah bagian dari perjalanan Studyclub yang penuh inspirasi dengan
           berbagai materi menarik yang kami selenggarakan.
         </p>
-      </div>
-      <div className="flex flex-col justify-center items-center gap-y-3 w-full my-4 p-2 mt-[20px] md:mt-[50px]">
+      </motion.div>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 100 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 1, type: "spring" }}
+        className="flex flex-col justify-center items-center gap-y-3 w-full my-4 p-2 mt-[20px] md:mt-[50px]"
+      >
         {timeline.map((x, index) => {
           return (
             <Fragment key={index}>
@@ -50,7 +71,7 @@ function Timeline() {
             </Fragment>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

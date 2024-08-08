@@ -1,28 +1,43 @@
 import { useState } from "react";
-import { FaAngleRight, FaAngleLeft, FaInstagram } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa6";
 
-function CarouselPemateri({ pemateri }) {
-  const [curr, setCurr] = useState(0);
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
-  const prev = () => {
-    setCurr((curr) => (curr === 0 ? pemateri.length - 3 : curr - 1));
-  };
+// import required modules
+import { FreeMode, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-  const next = () => {
-    setCurr((curr) => (curr === pemateri.length - 3 ? 0 : curr + 1));
-  };
-
+function CarouselPemateri({ pemateri, viewSlide }) {
   return (
-    <div className="relative overflow-hidden w-full h-full">
-      <div
-        className="flex gap-3 transition-transform ease-in duration-500"
-        style={{ transform: `translateX(-${curr * 100}%)` }}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 1, type: "spring" }}
+    >
+      <Swiper
+        slidesPerView={viewSlide}
+        spaceBetween={20}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Pagination]}
+        className="mt-[10px] md:mt-[50px]"
       >
         {pemateri.map((x, index) => {
           return (
-            <section
+            <SwiperSlide
+              className="bg-gradient-to-b shadow-mySecondary/40 from-myPrimary/30 to-myAccent/50 hover:from-myPrimary/50 hover:to-myAccent/80 dark:from-myPrimary/30 dark:to-mySecondary/50 dark:hover:from-myPrimary/50 dark:hover:to-myAccent/80 flex flex-col justify-center items-center h-[19em] gap-1 border rounded-xl text-myText p-1 relative"
               key={index}
-              className="min-w-[47%] bg-gradient-to-b from-mySecondary/10 to-mySecondary/50 hover:from-mySecondary/50 hover:to-myAccent/80 flex flex-col justify-center items-center h-[18em] gap-2 border rounded-xl text-myText p-1 relative"
             >
               <img
                 src={x.foto}
@@ -32,42 +47,29 @@ function CarouselPemateri({ pemateri }) {
                     ? "w-[180px]"
                     : x.nama === "Johan"
                     ? "w-[200px]"
-                    : "w-[110px]"
+                    : "w-[130px]"
                 }
               />
               <div>
-                <h1 className="font-bold text-md text-center">{x.nama}</h1>
-                <p className="text-center text-sm">{x.title}</p>
+                <h1 className="font-bold text-md md:text-lg text-center">
+                  {x.nama}
+                </h1>
+                <p className="text-center text-sm md:text-md">{x.title}</p>
               </div>
-              <a
+              <motion.a
+                whileHover={{ scaleX: 1.1 }}
                 href={x.insta}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="z-20"
               >
-                <div className="transition duration-300 ease-in-out transform hover:translate-y-1 bg-myAccent p-2 rounded-full z-20">
+                <div className="transition duration-300 ease-in-out transform hover:translate-y-1 bg-myAccent p-2 rounded-full mt-[10px]">
                   <FaInstagram color="white" size={20} />
                 </div>
-              </a>
-            </section>
+              </motion.a>
+            </SwiperSlide>
           );
         })}
-      </div>
-      <div className="absolute inset-0 flex items-center justify-between p-2">
-        <button
-          onClick={prev}
-          className="bg-myAccent dark:bg-white rounded-full"
-        >
-          <FaAngleLeft size={30} color="black" />
-        </button>
-        <button
-          onClick={next}
-          className="bg-myAccent dark:bg-white rounded-full"
-        >
-          <FaAngleRight size={30} color="black" />
-        </button>
-      </div>
-    </div>
+      </Swiper>
+    </motion.div>
   );
 }
 
